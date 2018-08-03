@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+    <!-- 다른 mapper와 중복되지 않도록 네임스페이스를 적도록 하자 -->
+    <mapper namespace="login">
+    
+    <select id="loginCheck" resultType="String">
+    select user_name AS userName from tbl_member
+    where user_id=#{userId} and user_pw=#{userPw}
+    </select>
+    
+    <select id="viewMember" resultType="com.example.project.model.dto.MemberVO">
+    select
+     user_name as userName,
+     user_id as userId,
+     user_email as userEmail,
+     user_regdate as userRegdate
+     from tbl_member
+     where user_id=#{userId} and user_pw=#{userPw}
+    </select>
+     
+   </mapper>

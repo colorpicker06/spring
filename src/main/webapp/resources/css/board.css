@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.*{
+	margin:30px;
+}
+
+a{
+	text-decoration: none;
+}
+
+#school{
+	width:90%;
+	opacity: 0.8;
+}
+
+
